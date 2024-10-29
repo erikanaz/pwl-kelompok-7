@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bowdown Caferacer Cianjur</title>
     <link href="../src/output.css" rel="stylesheet">
+    <style>
+        /* Tambahkan CSS untuk mengatur ukuran video */
+        #video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Pastikan video berada di belakang konten */
+            opacity: 0.7; /* Atur transparansi video jika perlu */
+        }
+    </style>
 </head>
-<body class="bg-black text-white">
-    <header class="text-center p-6 bg-red-800">
+<body class="bg-gray-100 text-black">
+    <header class="text-center p-6 bg-red-800 text-white">
         <h1 class="text-4xl font-bold">Bowdown Caferacer Cianjur</h1>
         <p class="text-sm">Komunitas motor custom dan caferacer di Cianjur</p>
         <nav class="mt-4">
@@ -16,20 +29,26 @@
                 <li><a href="#tentang" class="hover:text-gray-300 transition">Tentang Kami</a></li>
                 <li><a href="#galeri" class="hover:text-gray-300 transition">Galeri</a></li>
                 <li><a href="#event" class="hover:text-gray-300 transition">Event</a></li>
+                <li><a href="#become-member" class="hover:text-gray-300 transition">Cara Menjadi Anggota</a></li>
                 <li><a href="#kontak" class="hover:text-gray-300 transition">Kontak</a></li>
+                <li><a href="login.html" class="hover:text-gray-300 transition">Login</a></li> <!-- Tautan Login ditambahkan -->
             </ul>
         </nav>
     </header>
     
-    <section id="beranda" class="bg-cover bg-center h-64 flex items-center justify-center" style="background-image: url('path/to/your-background-image.jpg');">
-        <div class="bg-black bg-opacity-70 p-8 rounded-lg shadow-lg">
-            <h2 class="text-4xl font-bold text-white">Welcome to Bowdown Caferacer Cianjur.</h2>
-            <p class="text-lg text-gray-300 mt-2">Menghargai kesederhanaan, merangkul keberanian.</p>
+    <section id="beranda" class="relative h-64 flex items-center justify-center">
+        <video autoplay muted loop id="video-background">
+            <source src="../assets/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="bg-black bg-opacity-70 p-8 rounded-lg shadow-lg relative z-10">
+            <h2 class="text-4xl font-bold text-red-500">Welcome to Bowdown Caferacer Cianjur.</h2>
+            <p class="text-lg text-gray-300 mt-2">ride and down.</p>
         </div>
     </section>
 
-    <section id="tentang" class="p-8 bg-gray-900 text-white">
-        <h2 class="text-3xl font-bold mb-4 text-red-500 relative inline-block">
+    <section id="tentang" class="p-8 bg-white text-black">
+        <h2 class="text-3xl font-bold mb-4 relative inline-block">
             <span class="absolute inset-0 bg-red-700 rounded-lg opacity-75"></span>
             <span class="relative">Tentang Kami</span>
         </h2>
@@ -41,67 +60,112 @@
         </p>
     </section>
 
-    <section id="galeri" class="p-8 bg-gray-800 text-white">
-        <h2 class="text-3xl font-bold mb-4 text-red-500 relative inline-block">
+    <section id="galeri" class="p-8 bg-white text-black">
+        <h2 class="text-3xl font-bold mb-4 relative inline-block">
             <span class="absolute inset-0 bg-red-700 rounded-lg opacity-75"></span>
             <span class="relative">Galeri</span>
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <!-- Gambar galeri - tambahkan URL gambar pada setiap tag <img> -->
-            <div class="bg-gray-700 p-2 rounded">
-                <img src="path/to/image1.jpg" alt="Kegiatan 1" class="w-full h-40 object-cover rounded">
+            <div class="bg-gray-200 p-2 rounded">
+                <img src="../assets/foto1.jpg" alt="Kegiatan 1" class="w-full h-60 object-cover rounded">
             </div>
-            <div class="bg-gray-700 p-2 rounded">
-                <img src="path/to/image2.jpg" alt="Kegiatan 2" class="w-full h-40 object-cover rounded">
+            <div class="bg-gray-200 p-2 rounded">
+                <img src="../assets/foto2.jpg" alt="Kegiatan 2" class="w-full h-60 object-cover rounded">
             </div>
-            <div class="bg-gray-700 p-2 rounded">
-                <img src="path/to/image3.jpg" alt="Kegiatan 3" class="w-full h-40 object-cover rounded">
+            <div class="bg-gray-200 p-2 rounded">
+                <img src="../assets/foto3.jpg" alt="Kegiatan 3" class="w-full h-60 object-cover rounded">
             </div>
             <!-- Tambahkan lebih banyak div untuk gambar lainnya -->
         </div>
     </section>
 
-    <section id="event" class="p-8 bg-gray-900 text-white">
-        <h2 class="text-3xl font-bold mb-4 text-red-500 relative inline-block">
+    <section id="event" class="p-8 bg-white text-black">
+        <h2 class="text-3xl font-bold mb-4 relative inline-block">
             <span class="absolute inset-0 bg-red-700 rounded-lg opacity-75"></span>
             <span class="relative">Kegiatan & Event</span>
         </h2>
         <div class="space-y-4">
             <!-- Acara 1 -->
-            <div class="p-4 bg-gray-700 rounded">
+            <div class="p-4 bg-gray-200 rounded">
                 <h3 class="text-2xl font-semibold">Touring Bulanan</h3>
-                <p class="text-sm text-gray-300">Tanggal: 10 November 2024</p>
+                <p class="text-sm text-gray-700">Tanggal: 10 November 2024</p>
                 <p class="mt-2">Kegiatan touring ke daerah pegunungan, mempererat persaudaraan di antara anggota sambil menikmati keindahan alam.</p>
             </div>
             <!-- Acara 2 -->
-            <div class="p-4 bg-gray-700 rounded">
+            <div class="p-4 bg-gray-200 rounded">
                 <h3 class="text-2xl font-semibold">Charity Ride</h3>
-                <p class="text-sm text-gray-300">Tanggal: 24 Desember 2024</p>
+                <p class="text-sm text-gray-700">Tanggal: 24 Desember 2024</p>
                 <p class="mt-2">Mengadakan kegiatan amal sambil touring bersama ke panti asuhan dan mengumpulkan donasi untuk mereka yang membutuhkan.</p>
             </div>
         </div>
     </section>
 
-    <section id="kontak" class="p-8 bg-black text-white">
-        <h2 class="text-3xl font-bold mb-4 text-red-500 relative inline-block">
+    <section id="become-member" class="p-8 bg-white text-black">
+        <h2 class="text-3xl font-bold mb-4 relative inline-block">
+            <span class="absolute inset-0 bg-red-700 rounded-lg opacity-75"></span>
+            <span class="relative">Cara Menjadi Anggota Bowdown</span>
+        </h2>
+        <p class="mb-4">
+            Untuk bergabung dengan Bowdown Caferacer, calon anggota harus memenuhi beberapa syarat penting. Kami mengutamakan kualitas anggota yang memiliki semangat dan komitmen terhadap budaya motor custom, khususnya gaya caferacer.
+        </p>
+        <p class="mb-4">
+            <strong>Syarat untuk menjadi anggota:</strong>
+        </p>
+        <ul class="list-disc ml-5 mb-4">
+            <li>Memiliki motor custom, khususnya caferacer.</li>
+            <li>Telah cukup umur dan memiliki Surat Izin Mengemudi (SIM) yang sah.</li>
+        </ul>
+        <p class="mb-4">
+            <strong>Proses Keanggotaan:</strong>
+        </p>
+        <p class="mb-2">
+            Proses keanggotaan di Bowdown Caferacer terdiri dari beberapa tahap, yang dirancang untuk memastikan bahwa setiap anggota memiliki komitmen yang tinggi terhadap komunitas ini:
+        </p>
+        <ol class="list-decimal ml-5 mb-4">
+            <li>
+                <strong>Calon Prospek (3 Bulan):</strong> Pada tahap ini, calon anggota akan diperkenalkan kepada komunitas dan menjalani proses observasi selama 3 bulan. 
+            </li>
+            <li>
+                <strong>Prospek (6 Bulan):</strong> Jika dinyatakan lolos, anggota akan masuk ke tahap prospek selama 6 bulan, di mana mereka akan lebih aktif terlibat dalam kegiatan klub.
+            </li>
+            <li>
+                <strong>Virgin Member (6 Bulan):</strong> Setelah 6 bulan sebagai prospek, anggota dapat menjadi virgin member. Pada tahap ini, mereka harus menjalani 6 bulan masa keanggotaan dengan partisipasi aktif.
+            </li>
+            <li>
+                <strong>Life Member (6 Bulan):</strong> Setelah memenuhi semua syarat dan berkomitmen penuh, anggota dapat diangkat menjadi life member setelah 6 bulan sebagai virgin member.
+            </li>
+        </ol>
+        <p>
+            Setiap anggota diwajibkan untuk mengikuti kegiatan mandatory touring setiap 6 bulan, yang merupakan salah satu syarat untuk mempertahankan keanggotaan.
+        </p>
+        <p>
+            Bergabunglah dengan kami dan menjadi bagian dari komunitas yang saling mendukung dan menginspirasi dalam hobi motor custom!
+        </p>
+    </section>
+
+    <section id="kontak" class="p-8 bg-white text-black">
+        <h2 class="text-3xl font-bold mb-4 relative inline-block">
             <span class="absolute inset-0 bg-red-700 rounded-lg opacity-75"></span>
             <span class="relative">Kontak Kami</span>
         </h2>
         <form class="space-y-4 max-w-md mx-auto">
             <div>
                 <label class="block text-sm font-medium">Nama</label>
-                <input type="text" class="w-full p-2 mt-1 rounded bg-gray-800 border border-gray-600 focus:border-red-600" placeholder="Nama Anda">
+                <input type="text" class="w-full p-2 mt-1 rounded bg-gray-200 border border-gray-400 focus:border-red-600" placeholder="Nama Anda">
             </div>
             <div>
                 <label class="block text-sm font-medium">Email</label>
-                <input type="email" class="w-full p-2 mt-1 rounded bg-gray-800 border border-gray-600 focus:border-red-600" placeholder="email@domain.com">
+                <input type="email" class="w-full p-2 mt-1 rounded bg-gray-200 border border-gray-400 focus:border-red-600" placeholder="email@domain.com">
             </div>
             <div>
                 <label class="block text-sm font-medium">Pesan</label>
-                <textarea class="w-full p-2 mt-1 rounded bg-gray-800 border border-gray-600 focus:border-red-600" rows="4" placeholder="Tulis pesan Anda..."></textarea>
+                <textarea class="w-full p-2 mt-1 rounded bg-gray-200 border border-gray-400 focus:border-red-600" rows="4" placeholder="Tulis pesan Anda..."></textarea>
             </div>
             <button type="submit" class="w-full py-2 bg-red-700 text-white font-bold rounded hover:bg-red-800 transition">Kirim Pesan</button>
         </form>
+        <div class="mt-4 text-center">
+            <p>Ikuti kami di Instagram: <a href="https://www.instagram.com/bowdown_rockers/" class="text-red-500 hover:underline" target="_blank">@bowdown_rockers</a></p>
+        </div>
     </section>
 </body>
 </html>
