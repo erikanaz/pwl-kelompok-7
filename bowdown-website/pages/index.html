@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bowdown Caferacer Cianjur</title>
+    <link href="../src/output.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white">
+    <header class="text-center p-6 bg-red-800">
+        <h1 class="text-4xl font-bold">Bowdown Caferacer Cianjur</h1>
+        <p class="text-sm">Komunitas motor custom dan caferacer di Cianjur</p>
+        <nav class="mt-4">
+            <ul class="flex justify-center space-x-6">
+                <li><a href="#beranda" class="hover:text-gray-300 transition">Beranda</a></li>
+                <li><a href="#tentang" class="hover:text-gray-300 transition">Tentang Kami</a></li>
+                <li><a href="#galeri" class="hover:text-gray-300 transition">Galeri</a></li>
+                <li><a href="#event" class="hover:text-gray-300 transition">Event</a></li>
+                <li><a href="#kontak" class="hover:text-gray-300 transition">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="beranda" class="bg-cover bg-center h-64 flex items-center justify-center" style="background-image: url('path/to/your-background-image.jpg');">
+        <div class="bg-black bg-opacity-70 p-8 rounded-lg shadow-lg">
+            <h2 class="text-4xl font-bold text-white">Welcome to Bowdown Caferacer Cianjur.</h2>
+            <p class="text-lg text-gray-300 mt-2">Menghargai kesederhanaan, merangkul keberanian.</p>
+        </div>
+    </section>
+
+    <section id="tentang" class="p-8 bg-gray-900 text-white">
+        <h2 class="text-3xl font-bold mb-4 text-red-500 relative inline-block">
+            <span class="absolute inset-0 bg-red-700 rounded-lg opacity-75"></span>
+            <span class="relative">Tentang Kami</span>
+        </h2>
+        <p class="mb-2">
+            Bowdown Caferacer Cianjur adalah komunitas yang berdiri sejak 16 September 2022, dengan tujuan memfasilitasi para penggemar motor custom khususnya gaya caferacer untuk berbagi hobi, meningkatkan keterampilan, dan menjalin persaudaraan.
+        </p>
+        <p>
+            Kami memiliki beberapa tingkatan anggota, mulai dari calon prospek hingga life member, yang semuanya memiliki komitmen yang sama terhadap budaya motor custom dan keselamatan berkendara.
+        </p>
+    </section>
+
+    <section id="galeri" class="p-8 bg-gray-800 text-white">
+        <h2 class="text-3xl font-bold mb-4 text-red-500 relative inline-block">
+            <span class="absolute inset-0 bg-red-700 rounded-lg opacity-75"></span>
+            <span class="relative">Galeri</span>
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <!-- Gambar galeri - tambahkan URL gambar pada setiap tag <img> -->
+            <div class="bg-gray-700 p-2 rounded">
+                <img src="path/to/image1.jpg" alt="Kegiatan 1" class="w-full h-40 object-cover rounded">
+            </div>
+            <div class="bg-gray-700 p-2 rounded">
+                <img src="path/to/image2.jpg" alt="Kegiatan 2" class="w-full h-40 object-cover rounded">
+            </div>
+            <div class="bg-gray-700 p-2 rounded">
+                <img src="path/to/image3.jpg" alt="Kegiatan 3" class="w-full h-40 object-cover rounded">
+            </div>
+            <!-- Tambahkan lebih banyak div untuk gambar lainnya -->
+        </div>
+    </section>
+
+    <section id="event" class="p-8 bg-gray-900 text-white">
+        <h2 class="text-3xl font-bold mb-4 text-red-500 relative inline-block">
+            <span class="absolute inset-0 bg-red-700 rounded-lg opacity-75"></span>
+            <span class="relative">Kegiatan & Event</span>
+        </h2>
+        <div class="space-y-4">
+            <!-- Acara 1 -->
+            <div class="p-4 bg-gray-700 rounded">
+                <h3 class="text-2xl font-semibold">Touring Bulanan</h3>
+                <p class="text-sm text-gray-300">Tanggal: 10 November 2024</p>
+                <p class="mt-2">Kegiatan touring ke daerah pegunungan, mempererat persaudaraan di antara anggota sambil menikmati keindahan alam.</p>
+            </div>
+            <!-- Acara 2 -->
+            <div class="p-4 bg-gray-700 rounded">
+                <h3 class="text-2xl font-semibold">Charity Ride</h3>
+                <p class="text-sm text-gray-300">Tanggal: 24 Desember 2024</p>
+                <p class="mt-2">Mengadakan kegiatan amal sambil touring bersama ke panti asuhan dan mengumpulkan donasi untuk mereka yang membutuhkan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="p-8 bg-black text-white">
+        <h2 class="text-3xl font-bold mb-4 text-red-500 relative inline-block">
+            <span class="absolute inset-0 bg-red-700 rounded-lg opacity-75"></span>
+            <span class="relative">Kontak Kami</span>
+        </h2>
+        <form class="space-y-4 max-w-md mx-auto">
+            <div>
+                <label class="block text-sm font-medium">Nama</label>
+                <input type="text" class="w-full p-2 mt-1 rounded bg-gray-800 border border-gray-600 focus:border-red-600" placeholder="Nama Anda">
+            </div>
+            <div>
+                <label class="block text-sm font-medium">Email</label>
+                <input type="email" class="w-full p-2 mt-1 rounded bg-gray-800 border border-gray-600 focus:border-red-600" placeholder="email@domain.com">
+            </div>
+            <div>
+                <label class="block text-sm font-medium">Pesan</label>
+                <textarea class="w-full p-2 mt-1 rounded bg-gray-800 border border-gray-600 focus:border-red-600" rows="4" placeholder="Tulis pesan Anda..."></textarea>
+            </div>
+            <button type="submit" class="w-full py-2 bg-red-700 text-white font-bold rounded hover:bg-red-800 transition">Kirim Pesan</button>
+        </form>
+    </section>
+</body>
+</html>
